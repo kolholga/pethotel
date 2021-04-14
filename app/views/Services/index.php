@@ -19,54 +19,28 @@
             <div class="col-lg-7 col-md-10"></div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service">
-                    <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                        <div class="service_icon">
-                            <img src="/img/service/service_icon_1.png" alt="">
+
+            <? foreach ($services as $arServices): ?>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                        <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                            <div class="service_icon">
+                                <img src="<?= $arServices['image'] ?>" alt="">
+                            </div>
+                        </div>
+                        <div class="service_content text-center">
+                            <h3><?= $arServices['title'] ?></h3>
+                            <p><?= $arServices['shot_description'] ?></p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <a href="detail/index/<?= $arServices['id'] ?>" class="boxed-btn4">Подробнее...</a>
                         </div>
                     </div>
-                    <div class="service_content text-center">
-                        <h3>Страхование животных</h3>
-                        <p>Работники предприятия осуществляют посредническую деятельность по заключению договоров страхования от имени УСП «Белгосстрах»</p>
-                    </div>
-                    <div class="row justify-content-center">
-                        <a href="/detail" class="boxed-btn4">Подробнее...</a>
-                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service active">
-                    <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                        <div class="service_icon">
-                            <img src="/img/service/service_icon_2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="service_content text-center">
-                        <h3>Ветеринарные услуги</h3>
-                        <p>стерилизация, кастрация; вакцинация (с оформлением ветеринарного паспорта) диагностика микроспории, трихофитии; обрезка когтей и др.</p>
-                    </div>
-                    <div class="row justify-content-center">
-                        <a href="/detail" class="boxed-btn4">Подробнее...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service">
-                    <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                        <div class="service_icon">
-                            <img src="/img/service/service_icon_3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="service_content text-center">
-                        <h3>Услуги кинолога</h3>
-                        <p>На базе гостиницы для животных организуются курсы подготовки владельцев собак. Обучение рассчитано на 70 академических часов.</p>
-                    </div>
-                    <div class="row justify-content-center">
-                        <a href="/detail" class="boxed-btn4">Подробнее...</a>
-                    </div>
-                </div>
-            </div>
+
+            <? endforeach; ?>
+
         </div>
     </div>
 </div>
@@ -84,45 +58,25 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="single_team">
-                    <div class="thumb">
-                        <img src="img/team/1.png" alt="">
-                    </div>
-                    <div class="member_name text-center">
-                        <div class="mamber_inner">
-                            <h4>Наталья Иванова</h4>
-                            <p>Страховщик</p>
+
+            <? foreach ($specialists as $arSpecialists): ?>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team">
+                        <div class="thumb">
+                            <img src="<?= $arSpecialists['image'] ?>" alt="">
+                        </div>
+                        <div class="member_name text-center">
+                            <div class="mamber_inner">
+                                <h4><?= $arSpecialists['name'] ?>"</h4>
+                                <p><?= $arSpecialists['specialization'] ?>"</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_team">
-                    <div class="thumb">
-                        <img src="img/team/2.png" alt="">
-                    </div>
-                    <div class="member_name text-center">
-                        <div class="mamber_inner">
-                            <h4>Дмитрий Пупкинк</h4>
-                            <p>Ветеринарный врач</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_team">
-                    <div class="thumb">
-                        <img src="img/team/3.png" alt="">
-                    </div>
-                    <div class="member_name text-center">
-                        <div class="mamber_inner">
-                            <h4>Ольга Пипкина</h4>
-                            <p>Кинолог</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <? endforeach; ?>
+
         </div>
     </div>
 </div>

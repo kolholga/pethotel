@@ -31,13 +31,14 @@ class Db
     /**
      * метод выполняет простые запросы
      * @param $sql
+     * @param array $param
      * @return bool
      */
-    public function exec($sql) // передаем строку с запросом $sgl
+    public function exec($sql, $param = [])
     {
         self::$queries[] = $sql;
         $stmt = $this->pdo->prepare($sql);
-        return $stmt->execute();
+        return $stmt->execute($param);
     }
 
     /**

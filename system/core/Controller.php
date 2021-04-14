@@ -9,7 +9,7 @@ abstract class Controller
     protected $route;
     protected $layout;
     protected $view;
-    public $vars = []; //хранятся данные, которыу мы можем передать в шаблон
+    public $vars = []; //хранятся данные, которые мы можем передать в шаблон
 
     public function __construct($route, $view = '')
     {

@@ -39,7 +39,7 @@ spl_autoload_register(function ($class) {  //spl_autoload_register — Реги�
 //Router::add(['^(?P<controller>[a-z0-9-]+)/?(?P<action>[a-z0-9-]+)/(?P<alias>[a-z0-9-]+)$' => []]); //для примера
 
 // свои правила (пишем до дефолтных правил)
-Router::add(['^news/view/(?P<id>[0-9]+/?)$' => ['controller' => 'News', 'action' => 'view']]);
+Router::add(['^detail/index/(?P<id>[0-9]+/?)$' => ['controller' => 'Detail', 'action' => 'index']]);
 
 // правила по умолчанию - default admin
 Router::add(['^admin$' => ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin\\']]);

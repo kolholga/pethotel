@@ -31,45 +31,26 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service">
-                    <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                        <div class="service_icon">
-                            <img src="/img/service/service_icon_1.png" alt="">
+
+
+            <? foreach ($services as $arServices): ?>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service">
+                        <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
+                            <div class="service_icon">
+                                <img src="<?= $arServices['image'] ?>" alt="">
+                            </div>
+                        </div>
+                        <div class="service_content text-center">
+                            <h3><?= $arServices['title'] ?></h3>
+                            <p><?= $arServices['shot_description'] ?></p>
                         </div>
                     </div>
-                    <div class="service_content text-center">
-                        <h3>Страхование животных</h3>
-                        <p>Работники предприятия осуществляют посредническую деятельность по заключению договоров страхования от имени УСП «Белгосстрах»</p>
-                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service active">
-                    <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                        <div class="service_icon">
-                            <img src="/img/service/service_icon_2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="service_content text-center">
-                        <h3>Ветеринарные услуги</h3>
-                        <p>стерилизация, кастрация; вакцинация (с оформлением ветеринарного паспорта) диагностика микроспории, трихофитии; обрезка когтей и др.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_service">
-                    <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-                        <div class="service_icon">
-                            <img src="/img/service/service_icon_3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="service_content text-center">
-                        <h3>Услуги кинолога</h3>
-                        <p>На базе гостиницы для животных организуются курсы подготовки владельцев собак. Обучение рассчитано на 70 академических часов.</p>
-                    </div>
-                </div>
-            </div>
+
+            <? endforeach; ?>
+
         </div>
     </div>
     <div class="row justify-content-center">
@@ -119,30 +100,39 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="textmonial_active owl-carousel">
-                            <div class="testmonial_wrap">
-                                <div class="single_testmonial d-flex align-items-center">
-                                    <div class="test_thumb">
-                                        <img src="/img/testmonial/2.png" alt="">
-                                    </div>
-                                    <div class="test_content">
-                                        <h4>Дмитрий Пупкин</h4>
-                                        <span>Ветеринарный врач</span>
-                                        <p></p>
+
+                            <? foreach ($specialists as $arSpecialists): ?>
+
+                                <div class="testmonial_wrap">
+                                    <div class="single_testmonial d-flex align-items-center">
+                                        <div class="test_thumb">
+                                            <img src="<?= $arSpecialists['image'] ?>" alt="">
+                                        </div>
+                                        <div class="test_content">
+                                            <h4><?= $arSpecialists['name'] ?></h4>
+                                            <span><?= $arSpecialists['specialization'] ?></span>
+                                            <p></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+
+                            <? endforeach; ?>
+
+
+                           <!--
                             <div class="testmonial_wrap">
                                 <div class="single_testmonial d-flex align-items-center">
                                     <div class="test_thumb">
                                         <img src="/img/testmonial/3.png" alt="">
                                     </div>
                                     <div class="test_content">
-                                        <h4>Ольга Пипкина</h4>
+                                        <h4>Мария Кац</h4>
                                         <span>Кинолог</span>
                                         <p></p>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="testmonial_wrap">
                                 <div class="single_testmonial d-flex align-items-center">
                                     <div class="test_thumb">
@@ -155,6 +145,12 @@
                                     </div>
                                 </div>
                             </div>
+                            -->
+
+
+
+
+
                         </div>
                     </div>
                 </div>
