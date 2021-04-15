@@ -4,7 +4,7 @@
 namespace app\controllers\admin;
 
 
-use app\models\News;
+use app\models\Contacts;
 use app\models\Services;
 use app\models\User;
 
@@ -12,12 +12,33 @@ class MainController extends AppController
 {
     public function indexAction()
     {
-        //echo password_hash('123456', PASSWORD_DEFAULT);
-        /*$news = new News();*/
-        $news = new Services();
-        $arNews = $news->findAll();
+        $services = new Services();
+        $feedback = new Contacts();
 
-        $this->setVars(['arNews' => $arNews]);
+        $arServices = $services->findAll();
+        $arFeedback = $feedback->findAll();
+
+        $this->setVars(['services' => $arServices]);
+        $this->setVars(['feedback' => $arFeedback]);
+
+        /**
+         * добавление данных из формы "Сервисы"
+         */
+        if (isset($_POST['services'])) {
+            $title = clearStr($_POST['title']);
+            $description = clearStr($_POST['description']);
+            $shot_description = clearStr($_POST['shot_description']);
+
+            $services->addServices(
+                [
+                    'title' => $title,
+                    'description' => $description,
+                    'shot_description' => $shot_description
+                ]
+            );
+            header('Location: /admin');
+            die();
+        }
     }
 
     public function loginAction()

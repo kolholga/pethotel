@@ -10,7 +10,8 @@ use app\models\Specialists;
 class ServicesController extends AppController
 {
 
-    public function indexAction(){
+    public function indexAction()
+    {
 
         $services = new Services();
         $specialists = new Specialists();
@@ -20,7 +21,7 @@ class ServicesController extends AppController
          */
         $arServices = $services->findAll();
         $arSpecialists = $specialists->findAll();
-        
+
         $this->setVars(['services' => $arServices, 'specialists' => $arSpecialists]);
 
     }

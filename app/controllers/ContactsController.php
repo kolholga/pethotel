@@ -14,8 +14,9 @@ class ContactsController extends AppController
 
         $contacts = new Contacts();
 
-//добавление данных из формы
-
+        /**
+         * добавление данных в таблицу feedback БД из формы сообщений пользователей
+         */
         if (isset($_POST['feedback'])) {
             $name = clearStr($_POST['name']);
             $message = clearStr($_POST['message']);

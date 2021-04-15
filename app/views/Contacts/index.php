@@ -24,6 +24,7 @@
                 <h2 class="contact-title">Оставайтесь на связи</h2>
             </div>
             <div class="col-lg-8">
+
                 <form class="form-contact contact_form" action="" method="post">
                     <div class="row">
                         <div class="col-12">
@@ -51,6 +52,7 @@
                         <input type="submit" name="feedback" id="feedback" class="button button-contactForm boxed-btn" value="Отправить">
                     </div>
                 </form>
+
             </div>
             <div class="col-lg-3 offset-lg-1">
                 <div class="media contact-info">

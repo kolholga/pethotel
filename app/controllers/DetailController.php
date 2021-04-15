@@ -8,7 +8,8 @@ use app\models\Services;
 
 class DetailController extends AppController
 {
-    public function indexAction(){
+    public function indexAction()
+    {
 
         $id = intval($this->route['id']);
         $details = new Services();

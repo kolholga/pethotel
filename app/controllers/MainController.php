@@ -22,7 +22,7 @@ class MainController extends AppController
         $specialists = new Specialists();
 
         /**
-         * добавляем перечень услуг и специалистов из БД
+         * получаем перечень услуг и специалистов из БД
          */
         $arServices = $services->findAll();
         $arSpecialists = $specialists->findAll();

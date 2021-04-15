@@ -17,4 +17,17 @@ class Services extends Model
         return $this->db->query($sql, [$serviceId]);
     }
 
+    public function addServices($arr)
+    {
+        $sql = "INSERT INTO `services` SET `title` = ?, `description` = ?, `shot_description` = ?, `image` = '/img/service/service_icon_3.png' ";
+        return $this->db->exec(
+            $sql,
+            [
+                $arr['title'],
+                $arr['description'],
+                $arr['shot_description']
+            ]
+        );
+    }
+
 }
